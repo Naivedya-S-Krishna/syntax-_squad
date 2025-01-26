@@ -1,0 +1,214 @@
+/* Styling for the welcome message and moto */
+.welcome-message h1 {
+  color: black; /* Black text for the main welcome message */
+  font-size: 2.5rem;
+}
+
+#moto {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black; /* Black text for the moto */
+  margin-top: 10px;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background and Layout */
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('background2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: rgba(18, 0, 0, 0.989);
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color:white(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .menu a:hover {
+    color: #ff5733;
+  }
+  
+  .menu.show {
+    display: block;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  /* Profile */
+  .profile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  
+  /* Welcome Message */
+  .welcome-message h1 {
+    color: black;
+    font-size: 2.5rem;
+  }
+  
+  #moto {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+  }
+  
+  
+  
+  /* Skills Section */
+  .skills {
+    margin-top: 100px;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .skill-box {
+    background-color: rgba(76, 175, 80, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 150px;
+    text-align: center;
+  }
+  
+  .skill-box:hover {
+    background-color: rgba(76, 175, 80, 1);
+  }
+  * Profile Popup */
+.profile-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 3;
+  color: black;
+}
+
+.popup-content {
+  text-align: left;
+}
+
+#close-popup {
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+* Update the text color of user profile information */
+#user-name, #user-bio, #skills-have, #skills-want {
+  color: black; /* Set the text color to black */
+}
+
+#skills-have li, #skills-want li {
+  color: black; /* Set the color of list items to black */
+}
