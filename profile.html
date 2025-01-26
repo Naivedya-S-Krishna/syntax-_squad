@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Form</title>
-  <link rel="stylesheet" href="profile.css"> <!-- Link to CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css"> <!-- Linking to profile.css -->
 </head>
 <body>
-  <div class="profile-container">
-    <h1>Create Your Profile</h1>
-    <form id="profileForm">
-      <div class="input-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="input-group">
-        <label for="bio">Bio</label>
-        <textarea id="bio" name="bio" rows="4" required></textarea>
-      </div>
-      <div class="input-group">
-        <label for="skillsHave">Skills You Have</label>
-        <input type="text" id="skillsHave" name="skillsHave" required>
-      </div>
-      <div class="input-group">
-        <label for="skillsLearn">Skills You Want to Learn</label>
-        <input type="text" id="skillsLearn" name="skillsLearn" required>
-      </div>
-      <div class="input-group">
-        <label for="mobileNumber">Mobile Number (Optional)</label>
-        <input type="text" id="mobileNumber" name="mobileNumber">
-      </div>
-      <button type="submit" id="saveProfileBtn">Save Profile</button>
-      <p id="error-message" class="error"></p>
-    </form>
-  </div>
-  <script src="profile.js"></script> <!-- Link to JavaScript -->
+    <div class="container">
+        <div class="profile-box">
+            <h2>Complete Your Profile</h2>
+            <form id="profileForm" onsubmit="return redirectToWelcomePage()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4" required></textarea>
+                
+                <label for="skillsHave">Skills We Have:</label>
+                <input type="text" id="skillsHave" name="skillsHave" required>
+                
+                <label for="skillsWant">Skills We Want to Learn:</label>
+                <input type="text" id="skillsWant" name="skillsWant" required>
+                
+                <label for="mobile">Mobile Number (Optional):</label>
+                <input type="tel" id="mobile" name="mobile">
+                
+                <button type="submit">Save Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Redirect to the Welcome page upon form submission
+        function redirectToWelcomePage() {
+            window.location.href = "welcome.html"; // Navigate to the welcome page
+            return false;  // Prevents form submission
+        }
+    </script>
 </body>
 </html>
+
+
+
