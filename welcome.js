@@ -27,13 +27,13 @@ window.onload = function () {
       profile.addEventListener("click", () => {
         document.getElementById("user-name").innerText = user.name;
         document.getElementById("user-bio").innerText = user.bio;
-        document.getElementById("skills-have").innerHTML = user.skillsHave.map(skill => <li>${skill}</li>).join("");
-        document.getElementById("skills-want").innerHTML = user.skillsWant.map(skill => <li>${skill}</li>).join("");
+        document.getElementById("skills-have").innerHTML = user.skillsHave.map(skill => `<li>${skill}</li>`).join("");
+        document.getElementById("skills-want").innerHTML = user.skillsWant.map(skill => `<li>${skill}</li>`).join("");
     
         profilePopup.style.display = "block";
       });
     
       closePopup.addEventListener("click", () => {
         profilePopup.style.display = "none";
-      });
-    };
+      });
+    };
